@@ -61,11 +61,11 @@ export default function Home() {
         </div>
 
         <div className='bg-black items-center'>
-        <h1 className='text-red-600 border-black'>Testing for Tailwind</h1>
+        {/* <h1 className='text-red-600 border-black'>Testing for Tailwind</h1>
         <button
         onClick={callGenerateEndpoint}>
           Make API Call
-        </button>
+        </button> */}
         </div>
         <div >
         {apiOutput && (
