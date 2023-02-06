@@ -2,7 +2,7 @@ import { Excalidraw } from "@excalidraw/excalidraw"
 import { useState, useEffect } from 'react'
 
 
-export default function Drawboard(prop) {
+export default function Drawboard(prop: { text: any; }) {
   const [excalidrawAPI, setExcalidrawAPI] = useState(null);
 
   const updateScene = () => {
