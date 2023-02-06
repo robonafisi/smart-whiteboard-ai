@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { Excalidraw } from "@excalidraw/excalidraw"
-import { useState, useEffect } from "react"
+import { useState, useEffect, SetStateAction } from "react"
 import dynamic from "next/dynamic"
 
 
@@ -31,7 +31,7 @@ export default function Home() {
     setApiOutput(`${output.text}`);
   }
   
-    const onUserChangedText = (e) => {
+    const onUserChangedText = (e: { target: { value: SetStateAction<string> } }) => {
       setUserInput(e.target?.value);
     };
 
