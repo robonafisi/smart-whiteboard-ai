@@ -2,7 +2,7 @@ import { Excalidraw } from "@excalidraw/excalidraw"
 import { useState, useEffect } from 'react'
 
 
-export default function Drawboard(props) {
+export default function Drawboard(prop) {
   const [excalidrawAPI, setExcalidrawAPI] = useState(null);
 
   const updateScene = () => {
@@ -33,14 +33,14 @@ export default function Drawboard(props) {
       "updated": 1675504695013,
       "link": null,
       "locked": false,
-      "text": props.text,
+      "text": prop.text,
       "fontSize": 10,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
       "baseline": 18,
       "containerId": null,
-      "originalText": props.text
+      "originalText": prop.text
         },
       ],
       appState: {
