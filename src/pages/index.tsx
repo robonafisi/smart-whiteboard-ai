@@ -14,6 +14,7 @@ export default function Home() {
 
   const [userInput, setUserInput] = useState('')
   const [apiOutput, setApiOutput] = useState('')
+  const [isloading, setIsloading] = useState('')
 
   const callGenerateEndpoint = async () => {
 
