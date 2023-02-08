@@ -55,11 +55,11 @@ export default function Drawboard(prop: { text: any; }) {
       <div>
         <div>
         <h1 className='text-white text-4xl font-bold cursor-pointer m-4 text-center absolute left-1/3'>Algo-Lego Smart Whiteboard</h1>
-        <button onClick={updateScene} className='bg-indigo-300 px-6 py-2 rounded cursor-pointer m-4'>Update Page</button>
         </div>
         <div style={{ height: "500px" }}>
           <Excalidraw theme="dark" ref={(api) => setExcalidrawAPI(api)} />
         </div>       
+        <button onClick={updateScene} className='bg-indigo-300 px-6 py-2 rounded cursor-pointer m-4'>Update Page</button>
       </div>
     </>
   );
