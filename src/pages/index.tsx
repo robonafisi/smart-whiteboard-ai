@@ -14,9 +14,11 @@ export default function Home() {
 
   const [userInput, setUserInput] = useState('')
   const [apiOutput, setApiOutput] = useState('')
-  const [isloading, setIsloading] = useState('')
+  const [isloading, setIsloading] = useState(false)
 
   const callGenerateEndpoint = async () => {
+
+    setIsloading(true);
 
     const response = await fetch('/api/generate', {
       method: 'POST',
@@ -30,6 +32,7 @@ export default function Home() {
     const { output } = data;
   
     setApiOutput(`${output.text}`);
+    setIsloading(false);
   }
   
     const onUserChangedText = (e: { target: { value: SetStateAction<string> } }) => {
@@ -62,9 +65,11 @@ export default function Home() {
           onChange={onUserChangedText}
         />
          <button
-        className="bg-indigo-300 px-6 py-2 rounded cursor-pointer m-5"
+        className={
+          isloading ? 'w-14 h-14 border-4 border-dashed rounded-full animate-spin dark:border-violet-400 m-5' : 'bg-indigo-300 px-6 py-2 rounded cursor-pointer m-5'
+        }
         onClick={callGenerateEndpoint}>
-          Get Answer
+         {isloading ? "" : "Get Answer"}
         </button>
         </div>
 
