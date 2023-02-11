@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 
 export default function Drawboard(prop: { text: any; }) {
   const [excalidrawAPI, setExcalidrawAPI] = useState(null);
-  const CustomFooter = () => <button> Whiteboard Active</button>;
 
   const updateScene = () => {
     const sceneData = {
@@ -59,11 +58,9 @@ export default function Drawboard(prop: { text: any; }) {
         </div>
         <div style={{ height: "500px" }}>
           <Excalidraw theme="dark" ref={(api) => setExcalidrawAPI(api)}>
-          <MainMenu>
-            <p>We are still workng on this!</p>
-          </MainMenu>  
+
           <Footer>
-            <CustomFooter />
+            <p>Testing footer</p>
           </Footer>
           </Excalidraw>
         </div>       
