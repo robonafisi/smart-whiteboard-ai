@@ -65,6 +65,17 @@ export default function Drawboard(prop: { text: any; }) {
           <WelcomeScreen.Hints.MenuHint />
           <WelcomeScreen.Hints.HelpHint />
         </WelcomeScreen>
+        <MainMenu>
+          <MainMenu.ItemCustom>
+            <button
+              style={{ height: "2rem" }}
+              onClick={() => window.alert("custom menu item")}
+            >
+              {" "}
+              custom item
+            </button>
+          </MainMenu.ItemCustom>
+        </MainMenu>
           <Footer>
             <p>Testing footer</p>
           </Footer>
