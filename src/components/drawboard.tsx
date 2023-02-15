@@ -1,4 +1,4 @@
-import { Excalidraw, Footer, MainMenu } from "@excalidraw/excalidraw"
+import { Excalidraw, Footer, MainMenu, WelcomeScreen } from "@excalidraw/excalidraw"
 import { useState, useEffect } from 'react'
 
 
@@ -58,7 +58,13 @@ export default function Drawboard(prop: { text: any; }) {
         </div>
         <div style={{ height: "500px" }}>
           <Excalidraw theme="dark" ref={(api) => setExcalidrawAPI(api)}>
-
+          <WelcomeScreen>
+          <WelcomeScreen.Hints.ToolbarHint>
+            <p> ToolBar Hints </p>
+          </WelcomeScreen.Hints.ToolbarHint>
+          <WelcomeScreen.Hints.MenuHint />
+          <WelcomeScreen.Hints.HelpHint />
+        </WelcomeScreen>
           <Footer>
             <p>Testing footer</p>
           </Footer>
